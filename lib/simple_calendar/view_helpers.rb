@@ -58,7 +58,7 @@ module SimpleCalendar
 
                 td_class << (cur_events.any? ? "events" : "no-events")
                 
-                td_class << (cur_events.count > 1 ? "multiple_color" : "#{cur_events.first.activity_type}" if cur_events.present?
+                td_class << (cur_events.count > 1 ? "multiple_color" : "#{cur_events.first.activity_type}") if cur_events.present?
 
                 content_tag(:td, :class => td_class.join(" "), :'data-date-iso'=>date.to_s, 'data-date'=>date.to_s.gsub('-', '/')) do
                   content_tag(:div) do
